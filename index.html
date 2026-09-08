@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cipta Informatika Utama Mitra Transformasi Digital Perusahaan Anda</title>
+<meta name="description" content="CV Cipta Informatika Utama menyediakan solusi IT end-to-end: infrastruktur jaringan, pengembangan software, keamanan siber, data science, cloud, hingga IoT dan pelatihan IT.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: {
+            950: '#080F1F',
+            900: '#0A1628',
+            800: '#0F2544',
+            700: '#163459',
+            600: '#1F4573',
+          },
+          paper: '#F6F7F9',
+          'paper-alt': '#EBEEF2',
+          ink: '#101826',
+          'ink-soft': '#4B5768',
+          gold: {
+            DEFAULT: '#C6A15B',
+            light: '#DEC088',
+            dark: '#A47F3C',
+          },
+          cyan: {
+            DEFAULT: '#33D6C4',
+            soft: '#8FE9DE',
+          },
+        },
+        fontFamily: {
+          heading: ['Sora', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+        },
+      },
+    },
+  }
+</script>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-body bg-paper text-ink antialiased">
+
+<!-- ============ HEADER / NAVBAR ============ -->
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="flex items-center justify-between h-20">
+
+      <a href="#beranda" class="flex items-center gap-2.5 group">
+        <span class="grid place-items-center w-9 h-9 rounded-md bg-gold/90 text-navy-950 font-heading font-bold text-sm">CI</span>
+        <span class="font-heading font-semibold text-lg tracking-tight text-white nav-brand">Cipta Informatika Utama</span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-9">
+        <a href="#tentang" class="nav-link text-sm font-medium text-white/80 hover:text-white transition-colors">Tentang Kami</a>
+        <a href="#layanan" class="nav-link text-sm font-medium text-white/80 hover:text-white transition-colors">Layanan</a>
+        <a href="#keunggulan" class="nav-link text-sm font-medium text-white/80 hover:text-white transition-colors">Keunggulan</a>
+        <a href="#kontak" class="nav-link text-sm font-medium text-white/80 hover:text-white transition-colors">Kontak</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <a href="#kontak" class="hidden sm:inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-navy-950 text-sm font-semibold px-5 py-2.5 rounded-md transition-colors">
+          Konsultasi Gratis
+        </a>
+        <button id="menu-toggle" aria-label="Buka menu navigasi" aria-expanded="false" class="lg:hidden w-10 h-10 grid place-items-center text-white">
+          <span class="hamburger"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out bg-navy-950/98 backdrop-blur">
+    <nav class="flex flex-col px-6 py-6 gap-1">
+      <a href="#tentang" class="mobile-link py-3 text-white/90 border-b border-white/10">Tentang Kami</a>
+      <a href="#layanan" class="mobile-link py-3 text-white/90 border-b border-white/10">Layanan</a>
+      <a href="#keunggulan" class="mobile-link py-3 text-white/90 border-b border-white/10">Keunggulan</a>
+      <a href="#kontak" class="mobile-link py-3 text-white/90 border-b border-white/10">Kontak</a>
+      <a href="#kontak" class="mobile-link mt-4 text-center bg-gold text-navy-950 font-semibold py-3 rounded-md">Konsultasi Gratis</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="beranda" class="relative bg-navy-950 text-white overflow-hidden">
+  <div class="hero-glow"></div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 pt-40 pb-28 lg:pt-48 lg:pb-36 relative z-10">
+    <div class="grid lg:grid-cols-12 gap-16 items-center">
+
+      <div class="lg:col-span-7 reveal">
+        <p class="text-cyan font-medium text-sm tracking-wide mb-5">Konsultan &amp; Integrator Teknologi Informasi</p>
+        <h1 class="font-heading font-bold text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.12] text-white mb-7 max-w-2xl">
+          Infrastruktur, Keamanan, dan Kecerdasan Data dalam Satu Kemitraan
+        </h1>
+        <p class="text-white/70 text-lg leading-relaxed max-w-xl mb-10">
+          CV Cipta Informatika Utama merancang, membangun, dan menjaga ekosistem teknologi perusahaan Anda: dari jaringan dan server, hingga analitik data dan pertahanan siber.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#kontak" class="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-navy-950 font-semibold px-7 py-3.5 rounded-md transition-colors">
+            Konsultasi Gratis
+            <i class="fa-solid fa-arrow-right-long text-sm"></i>
+          </a>
+          <a href="#layanan" class="inline-flex items-center gap-2 border border-white/25 hover:border-white/60 text-white font-medium px-7 py-3.5 rounded-md transition-colors">
+            Lihat Layanan Kami
+          </a>
+        </div>
+
+        <div class="grid grid-cols-3 gap-8 mt-16 max-w-lg pt-8 border-t border-white/10">
+          <div>
+            <p class="font-heading font-bold text-2xl text-white">9</p>
+            <p class="text-white/50 text-sm mt-1">Lini Layanan IT</p>
+          </div>
+          <div>
+            <p class="font-heading font-bold text-2xl text-white">24/7</p>
+            <p class="text-white/50 text-sm mt-1">Dukungan Teknis</p>
+          </div>
+          <div>
+            <p class="font-heading font-bold text-2xl text-white">End-to-End</p>
+            <p class="text-white/50 text-sm mt-1">Dari Hardware ke Cloud</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 relative hidden lg:block reveal-delay">
+        <svg viewBox="0 0 480 480" class="w-full h-auto" role="img" aria-label="Ilustrasi jaringan node teknologi">
+          <g class="net-line" stroke="#33D6C4" stroke-opacity="0.35" stroke-width="1.3" fill="none">
+            <line x1="90" y1="120" x2="240" y2="200"/>
+            <line x1="240" y1="200" x2="390" y2="130"/>
+            <line x1="240" y1="200" x2="220" y2="340"/>
+            <line x1="220" y1="340" x2="100" y2="380"/>
+            <line x1="220" y1="340" x2="360" y2="390"/>
+            <line x1="90" y1="120" x2="60" y2="260"/>
+            <line x1="60" y1="260" x2="220" y2="340"/>
+            <line x1="390" y1="130" x2="420" y2="270"/>
+            <line x1="420" y1="270" x2="360" y2="390"/>
+          </g>
+          <g class="net-node">
+            <circle cx="90" cy="120" r="6" fill="#C6A15B"/>
+            <circle cx="240" cy="200" r="9" fill="#33D6C4"/>
+            <circle cx="390" cy="130" r="6" fill="#C6A15B"/>
+            <circle cx="220" cy="340" r="8" fill="#33D6C4"/>
+            <circle cx="100" cy="380" r="5" fill="#C6A15B"/>
+            <circle cx="360" cy="390" r="6" fill="#C6A15B"/>
+            <circle cx="60" cy="260" r="5" fill="#33D6C4"/>
+            <circle cx="420" cy="270" r="6" fill="#C6A15B"/>
+          </g>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ TENTANG KAMI ============ -->
+<section id="tentang" class="py-24 lg:py-32 bg-paper">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="grid lg:grid-cols-12 gap-14 items-start">
+
+      <div class="lg:col-span-4">
+        <p class="text-navy-800 font-medium text-sm mb-4">Tentang Kami</p>
+        <h2 class="font-heading font-bold text-3xl lg:text-4xl text-ink leading-tight">
+          Mitra teknologi yang tumbuh bersama bisnis Anda
+        </h2>
+      </div>
+
+      <div class="lg:col-span-7 lg:col-start-6">
+        <p class="text-ink-soft text-lg leading-relaxed mb-6">
+          CV Cipta Informatika Utama adalah perusahaan teknologi informasi yang menemani perusahaan, instansi, dan institusi pendidikan dalam merancang serta menjalankan transformasi digital mereka. Kami tidak hanya menjual perangkat atau sistem kami membangun fondasi teknologi yang dapat diandalkan dalam jangka panjang.
+        </p>
+        <p class="text-ink-soft text-lg leading-relaxed mb-10">
+          Dengan cakupan layanan mulai dari pengadaan hardware, pengembangan software, jaringan dan infrastruktur, hingga keamanan siber dan data science, tim kami bekerja sebagai satu kesatuan sehingga setiap komponen teknologi Anda saling terhubung, aman, dan siap berkembang.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="border-l-2 border-gold pl-5">
+            <p class="font-heading font-semibold text-ink mb-1">Pendekatan Konsultatif</p>
+            <p class="text-ink-soft text-sm leading-relaxed">Setiap solusi dimulai dari memahami proses bisnis Anda, bukan dari katalog produk.</p>
+          </div>
+          <div class="border-l-2 border-gold pl-5">
+            <p class="font-heading font-semibold text-ink mb-1">Satu Tim, Semua Lini</p>
+            <p class="text-ink-soft text-sm leading-relaxed">Hardware, software, jaringan, dan keamanan ditangani secara terintegrasi.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ LAYANAN KAMI ============ -->
+<section id="layanan" class="py-24 lg:py-32 bg-navy-950 text-white relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+
+    <div class="max-w-2xl mb-16">
+      <p class="text-cyan font-medium text-sm mb-4">Layanan Kami</p>
+      <h2 class="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-5">
+        Sembilan lini layanan, satu tanggung jawab penuh
+      </h2>
+      <p class="text-white/60 text-lg leading-relaxed">
+        Kami mengelompokkan layanan berdasarkan tahap perjalanan teknologi perusahaan Anda dari membangun fondasi, mengamankannya, hingga menumbuhkannya.
+      </p>
+    </div>
+
+    <!-- Kategori 1 -->
+    <div class="mb-14">
+      <div class="flex items-center gap-3 mb-7">
+        <span class="w-8 h-px bg-gold"></span>
+        <h3 class="font-heading font-semibold text-lg text-white">Membangun Fondasi</h3>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <article class="service-card">
+          <i class="fa-solid fa-computer icon-badge"></i>
+          <h4>Hardware &amp; Pengadaan IT</h4>
+          <p>Penyediaan unit komputer, server, komponen, dan aksesoris pendukung operasional, dipilih sesuai kebutuhan dan skala bisnis Anda.</p>
+        </article>
+
+        <article class="service-card">
+          <i class="fa-solid fa-code icon-badge"></i>
+          <h4>Software &amp; Web Development</h4>
+          <p>Pengembangan aplikasi web, sistem basis data, dan software custom yang dirancang mengikuti alur kerja perusahaan Anda, bukan sebaliknya.</p>
+        </article>
+
+        <article class="service-card">
+          <i class="fa-solid fa-network-wired icon-badge"></i>
+          <h4>Infrastruktur &amp; Jaringan</h4>
+          <p>Perancangan jaringan LAN/WAN/WiFi, konfigurasi server, dan pemeliharaan berkala agar sistem Anda tetap stabil dan responsif.</p>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- Kategori 2 -->
+    <div class="mb-14">
+      <div class="flex items-center gap-3 mb-7">
+        <span class="w-8 h-px bg-gold"></span>
+        <h3 class="font-heading font-semibold text-lg text-white">Mengamankan &amp; Menganalisis</h3>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <article class="service-card">
+          <i class="fa-solid fa-shield-halved icon-badge"></i>
+          <h4>Cyber Security &amp; Integrasi</h4>
+          <p>Penetration testing, pemulihan data, dan integrasi sistem untuk melindungi aset digital perusahaan dari ancaman siber.</p>
+        </article>
+
+        <article class="service-card">
+          <i class="fa-solid fa-clipboard-check icon-badge"></i>
+          <h4>IT Consulting &amp; Audit</h4>
+          <p>Konsultasi arsitektur sistem, audit IT, disaster recovery plan, hingga penyusunan IT Master Plan yang terukur.</p>
+        </article>
+
+        <article class="service-card">
+          <i class="fa-solid fa-chart-line icon-badge"></i>
+          <h4>Data Science &amp; Big Data</h4>
+          <p>Pemrosesan big data dan machine learning untuk mengubah data operasional instansi Anda menjadi keputusan yang tepat sasaran.</p>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- Kategori 3 -->
+    <div>
+      <div class="flex items-center gap-3 mb-7">
+        <span class="w-8 h-px bg-gold"></span>
+        <h3 class="font-heading font-semibold text-lg text-white">Menumbuhkan Bisnis</h3>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <article class="service-card">
+          <i class="fa-solid fa-cloud icon-badge"></i>
+          <h4>Cloud &amp; Hosting Services</h4>
+          <p>Penyediaan cloud server, web hosting, VPS, dan pengelolaan data center dengan keandalan dan skalabilitas tinggi.</p>
+        </article>
+
+        <article class="service-card">
+          <i class="fa-solid fa-microchip icon-badge"></i>
+          <h4>Internet of Things (IoT)</h4>
+          <p>Perencanaan dan integrasi teknologi IoT untuk menghubungkan perangkat, mesin, dan sistem informasi secara real-time.</p>
+        </article>
+
+        <article class="service-card">
+          <i class="fa-solid fa-graduation-cap icon-badge"></i>
+          <h4>IT Training &amp; Education</h4>
+          <p>Pelatihan IT, bootcamp, workshop, sertifikasi, dan bimbingan teknis untuk meningkatkan kapasitas tim internal Anda.</p>
+        </article>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ NILAI TAMBAH ============ -->
+<section id="keunggulan" class="py-24 lg:py-32 bg-paper-alt">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <div class="max-w-2xl mb-16">
+      <p class="text-navy-800 font-medium text-sm mb-4">Mengapa Memilih Kami</p>
+      <h2 class="font-heading font-bold text-3xl lg:text-4xl text-ink leading-tight">
+        Standar kerja yang layak dipercaya perusahaan Anda
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-navy-900/10 rounded-xl overflow-hidden">
+
+      <div class="value-card">
+        <i class="fa-solid fa-lock value-icon"></i>
+        <h4>Keamanan Terjamin</h4>
+        <p>Setiap sistem yang kami bangun mengikuti standar keamanan berlapis, dari infrastruktur hingga data.</p>
+      </div>
+
+      <div class="value-card">
+        <i class="fa-solid fa-user-graduate value-icon"></i>
+        <h4>Tenaga Ahli Bersertifikat</h4>
+        <p>Tim kami terdiri dari profesional bersertifikasi di bidang jaringan, keamanan siber, dan pengembangan software.</p>
+      </div>
+
+      <div class="value-card">
+        <i class="fa-solid fa-diagram-project value-icon"></i>
+        <h4>Solusi End-to-End</h4>
+        <p>Dari perencanaan, implementasi, hingga pemeliharaan seluruhnya ditangani oleh satu tim yang sama.</p>
+      </div>
+
+      <div class="value-card">
+        <i class="fa-solid fa-medal value-icon"></i>
+        <h4>Layanan Premium</h4>
+        <p>Respons cepat, komunikasi transparan, dan pendampingan berkelanjutan setelah proyek selesai.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ KONTAK / CTA ============ -->
+<section id="kontak" class="py-24 lg:py-28 bg-navy-950 text-white">
+  <div class="max-w-4xl mx-auto px-6 lg:px-10 text-center">
+    <h2 class="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-5">
+      Siap membicarakan kebutuhan teknologi perusahaan Anda?
+    </h2>
+    <p class="text-white/60 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
+      Jadwalkan sesi konsultasi gratis dengan tim kami untuk mengetahui solusi yang paling sesuai dengan skala dan anggaran bisnis Anda.
+    </p>
+    <a href="mailto:info@ciptainformatika.com" class="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-navy-950 font-semibold px-8 py-4 rounded-md transition-colors">
+      Hubungi Kami Sekarang
+      <i class="fa-solid fa-arrow-right-long text-sm"></i>
+    </a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-navy-900 text-white/60 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-2.5 mb-4">
+          <span class="grid place-items-center w-9 h-9 rounded-md bg-gold/90 text-navy-950 font-heading font-bold text-sm">CI</span>
+          <span class="font-heading font-semibold text-lg text-white">Cipta Informatika Utama</span>
+        </div>
+        <p class="text-sm leading-relaxed max-w-sm">
+          Mitra teknologi informasi untuk infrastruktur, software, keamanan siber, IoT, dan data dirancang agar bisnis Anda siap untuk apa pun yang akan datang.
+        </p>
+      </div>
+
+      <div>
+        <h5 class="text-white font-heading font-semibold text-sm mb-4">Kontak</h5>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-location-dot mt-1 text-gold"></i>
+            <span>Wonosobo, Jawa Tengah, Indonesia</span>
+          </li>
+          <li class="flex items-center gap-2.5">
+            <i class="fa-solid fa-envelope text-gold"></i>
+            <a href="mailto:ciptainformatikautama@gmail.com" class="hover:text-white transition-colors">ciptainformatikautama@gmail.com</a>
+          </li>
+          <li class="flex items-center gap-2.5">
+            <i class="fa-solid fa-phone text-gold"></i>
+            <a href="tel:+6285643647643" class="hover:text-white transition-colors">0856-4364-7643</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="text-white font-heading font-semibold text-sm mb-4">Ikuti Kami</h5>
+        <div class="flex gap-3">
+          <a href="#" aria-label="LinkedIn" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" aria-label="Website" class="social-icon"><i class="fa-solid fa-globe"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="text-xs text-white/40 pt-8 text-center">
+      &copy; <span id="year"></span> CV Cipta Informatika Utama. Seluruh hak cipta dilindungi.
+    </p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

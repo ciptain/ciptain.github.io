@@ -1,0 +1,247 @@
+/* ==========================================================================
+   Cipta Informatika Utama — Custom Styles
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   Navbar
+   -------------------------------------------------------------------------- */
+
+#navbar {
+  background-color: transparent;
+}
+
+#navbar.is-scrolled {
+  background-color: rgba(8, 15, 31, 0.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 22px;
+  height: 16px;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#menu-toggle[aria-expanded="true"] .hamburger span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+#menu-toggle[aria-expanded="true"] .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle[aria-expanded="true"] .hamburger span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+#mobile-menu.is-open {
+  max-height: 420px;
+}
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(60% 55% at 82% 15%, rgba(51, 214, 196, 0.14) 0%, rgba(51, 214, 196, 0) 60%),
+    radial-gradient(55% 45% at 8% 85%, rgba(198, 161, 91, 0.10) 0%, rgba(198, 161, 91, 0) 60%),
+    linear-gradient(180deg, #0A1628 0%, #080F1F 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.reveal,
+.reveal-delay {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: heroReveal 0.8s ease forwards;
+}
+
+.reveal-delay {
+  animation-delay: 0.15s;
+}
+
+@keyframes heroReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.net-node circle {
+  opacity: 0;
+  animation: nodeIn 0.5s ease forwards;
+  transform-origin: center;
+}
+
+.net-node circle:nth-child(1) { animation-delay: 0.3s; }
+.net-node circle:nth-child(2) { animation-delay: 0.45s; }
+.net-node circle:nth-child(3) { animation-delay: 0.6s; }
+.net-node circle:nth-child(4) { animation-delay: 0.75s; }
+.net-node circle:nth-child(5) { animation-delay: 0.9s; }
+.net-node circle:nth-child(6) { animation-delay: 1.05s; }
+.net-node circle:nth-child(7) { animation-delay: 1.2s; }
+.net-node circle:nth-child(8) { animation-delay: 1.35s; }
+
+@keyframes nodeIn {
+  from { opacity: 0; transform: scale(0.2); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.net-line line {
+  stroke-dasharray: 260;
+  stroke-dashoffset: 260;
+  animation: lineDraw 1.1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes lineDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* --------------------------------------------------------------------------
+   Service Cards
+   -------------------------------------------------------------------------- */
+
+.service-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 2rem 1.75rem;
+  transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+}
+
+.service-card:hover {
+  border-color: rgba(198, 161, 91, 0.45);
+  background-color: rgba(255, 255, 255, 0.045);
+  transform: translateY(-3px);
+}
+
+.service-card .icon-badge {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  background-color: rgba(51, 214, 196, 0.1);
+  color: #33D6C4;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-card h4 {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #ffffff;
+  margin-bottom: 0.65rem;
+}
+
+.service-card p {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+/* --------------------------------------------------------------------------
+   Value Cards (Why Choose Us)
+   -------------------------------------------------------------------------- */
+
+.value-card {
+  background-color: #F6F7F9;
+  padding: 2.5rem 2rem;
+  transition: background-color 0.25s ease;
+}
+
+.value-card:hover {
+  background-color: #ffffff;
+}
+
+.value-icon {
+  color: #C6A15B;
+  font-size: 1.35rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.value-card h4 {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #101826;
+  margin-bottom: 0.65rem;
+}
+
+.value-card p {
+  color: #4B5768;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+.social-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.6);
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.social-icon:hover {
+  color: #ffffff;
+  border-color: rgba(198, 161, 91, 0.5);
+  background-color: rgba(198, 161, 91, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility
+   -------------------------------------------------------------------------- */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #33D6C4;
+  outline-offset: 2px;
+  border-radius: 4px;
+}

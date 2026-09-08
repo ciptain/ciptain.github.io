@@ -87,4 +87,51 @@ document.addEventListener('DOMContentLoaded', () => {
     yearEl.textContent = new Date().getFullYear();
   }
 
+  /* ------------------------------------------------------------------
+     5. Scroll reveal — elemen muncul halus saat masuk viewport
+     ------------------------------------------------------------------ */
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealTargets = document.querySelectorAll('.reveal-up, .reveal-group');
+
+  if (revealTargets.length && !prefersReducedMotion && 'IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+    revealTargets.forEach((target) => revealObserver.observe(target));
+  } else {
+    // Reduced motion, atau browser tanpa dukungan IntersectionObserver:
+    // langsung tampilkan semua konten tanpa animasi.
+    revealTargets.forEach((target) => target.classList.add('is-visible'));
+  }
+
+  /* ------------------------------------------------------------------
+     6. Highlight link navigasi sesuai section yang sedang dilihat
+     ------------------------------------------------------------------ */
+  const sections = document.querySelectorAll('section[id]');
+  const desktopNavLinks = document.querySelectorAll('.nav-link');
+
+  if (sections.length && desktopNavLinks.length && 'IntersectionObserver' in window) {
+    const setActiveLink = (id) => {
+      desktopNavLinks.forEach((link) => {
+        link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
+      });
+    };
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveLink(entry.target.id);
+        }
+      });
+    }, { threshold: 0.4, rootMargin: '-80px 0px -40% 0px' });
+
+    sections.forEach((section) => sectionObserver.observe(section));
+  }
+
 });

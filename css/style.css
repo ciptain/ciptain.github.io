@@ -70,55 +70,6 @@ body {
   max-height: 420px;
 }
 
-.mobile-link {
-  opacity: 0;
-  transform: translateX(-8px);
-}
-
-#mobile-menu.is-open .mobile-link {
-  animation: mobileLinkIn 0.35s ease forwards;
-}
-
-#mobile-menu.is-open .mobile-link:nth-child(1) { animation-delay: 0.05s; }
-#mobile-menu.is-open .mobile-link:nth-child(2) { animation-delay: 0.1s; }
-#mobile-menu.is-open .mobile-link:nth-child(3) { animation-delay: 0.15s; }
-#mobile-menu.is-open .mobile-link:nth-child(4) { animation-delay: 0.2s; }
-#mobile-menu.is-open .mobile-link:nth-child(5) { animation-delay: 0.25s; }
-
-@keyframes mobileLinkIn {
-  to { opacity: 1; transform: translateX(0); }
-}
-
-/* Desktop nav — animated underline that tracks the active section */
-.nav-link {
-  position: relative;
-  padding-bottom: 4px;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 1.5px;
-  background-color: #33D6C4;
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover::after,
-.nav-link.is-active::after {
-  width: 100%;
-}
-
-.nav-link.is-active {
-  color: #ffffff;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .mobile-link { opacity: 1; transform: none; }
-}
-
 /* --------------------------------------------------------------------------
    Hero
    -------------------------------------------------------------------------- */
@@ -183,59 +134,6 @@ body {
   to { stroke-dashoffset: 0; }
 }
 
-/* Gentle idle drift once the network illustration has drawn in */
-.net-illustration {
-  animation: netFloat 7s ease-in-out 1.6s infinite;
-  transform-origin: center;
-}
-
-@keyframes netFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-/* --------------------------------------------------------------------------
-   Scroll reveal (progressive enhancement — content is visible without JS)
-   -------------------------------------------------------------------------- */
-
-.reveal-up {
-  opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal-up.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Stagger children within a revealed group (cards, value tiles) */
-.reveal-group.is-visible .reveal-item {
-  animation: itemRise 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.reveal-group .reveal-item {
-  opacity: 0;
-  transform: translateY(18px);
-}
-
-.reveal-group.is-visible .reveal-item:nth-child(1) { animation-delay: 0s; }
-.reveal-group.is-visible .reveal-item:nth-child(2) { animation-delay: 0.1s; }
-.reveal-group.is-visible .reveal-item:nth-child(3) { animation-delay: 0.2s; }
-.reveal-group.is-visible .reveal-item:nth-child(4) { animation-delay: 0.3s; }
-
-@keyframes itemRise {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal-up,
-  .reveal-group .reveal-item {
-    opacity: 1;
-    transform: none;
-  }
-}
-
 /* --------------------------------------------------------------------------
    Service Cards
    -------------------------------------------------------------------------- */
@@ -264,12 +162,6 @@ body {
   color: #33D6C4;
   font-size: 1.05rem;
   margin-bottom: 1.5rem;
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.25s ease;
-}
-
-.service-card:hover .icon-badge {
-  transform: scale(1.08) rotate(-4deg);
-  background-color: rgba(51, 214, 196, 0.18);
 }
 
 .service-card h4 {
